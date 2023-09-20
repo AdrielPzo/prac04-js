@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    const foo = () => {
+        console.log("foobar");}
+    foo(); // Invoke it using the variable
+// foobar
+function sayHello() {
+    return "Hello, ";
+}
+function greeting(helloMessage, name) {
+    console.log(helloMessage() + name);}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
+
+function sayHello() {
+ return () => {
+ console.log("Hello!");
+ }
+}
+
+    </script>
+</body>
+</html>
